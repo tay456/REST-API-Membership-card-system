@@ -133,3 +133,8 @@ dmypy.json
 *.iml
 out
 gen
+
+#files
+app/main/users.db
+app/main/controller/Register.py
+migrations*
