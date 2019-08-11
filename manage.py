@@ -4,11 +4,19 @@ import unittest
 from flask_migrate import Migrate, MigrateCommand
 from flask_script import Manager
 from app.main.model import user
+from app import blueprint
+
 
 from app.main import create_app, db
 
 """use factory function to create a instance of application"""
 app = create_app(os.getenv('BOILERPLATE_ENV') or 'dev')
+
+"""
+registering blueprint with the flask application instance
+"""
+app.register_blueprint(blueprint)
+
 
 """push an application context"""
 app.app_context().push()
