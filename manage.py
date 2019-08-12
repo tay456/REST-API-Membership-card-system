@@ -5,6 +5,8 @@ from flask_migrate import Migrate, MigrateCommand
 from flask_script import Manager
 from app.main.model import user
 from app import blueprint
+from app.main.model import blacklist
+
 
 
 from app.main import create_app, db
